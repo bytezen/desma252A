@@ -10,20 +10,31 @@ void setup() {
  _fMonaco = loadFont("Monaco.vlw");
  _fMuseo = loadFont("Museo-300-18.vlw");
  _fGotham = loadFont("Gotham-Light-24.vlw");
- textFont(_fGotham, 18); 
+ textFont(_fGotham, 16); 
  smooth();
  
   xml = new XMLElement(this, "koans.xml");
  int koans = xml.getChildCount();
  println(_getKoanChildContent(xml.getChild(0), "title"));
  print(_getKoanChildContent(xml.getChild(0), "content"));
+
 }
 
 void draw() {
- fill(0);
- stroke(1);
-
+  background(255);
+  fill(133,0,0);
+  text(_getKoanChildContent(xml.getChild(0), "title"),
+      0,0,100, 30);
+      textFont(_fMuseo, 14);
+  pushMatrix();
+  map();
+  translate(0,30);
+  rotate(PI/12);
+  text(_getKoanChildContent(xml.getChild(0), "content"),
+      0,0,100,100);      
+  popMatrix();
 }
+
 
 /**
   parameter koan: Expected formate <koan><childName></childName></koan>
