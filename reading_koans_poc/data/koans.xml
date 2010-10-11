@@ -1,6 +1,6 @@
 <koans>
 
-  <koan>
+  <!-- <koan>
      <title>call me...</title>
      <content>...Grand Puba Excelsior
 ...Uncle Big Ranch
@@ -14,9 +14,9 @@
     <width>270</width>
     <author>bytezen</author>
   </koan>
-
+              -->
 <!-- chapter: who am I -->
-  <koan>
+  <!-- <koan>
      <title> </title>
      <content>what you respond to in
 any work of art is the artist's 
@@ -26,29 +26,29 @@ limitations.</content>
      <top>260</top>
      <width>300</width>
      <author>saul steinberg</author>
-  </koan>
+  </koan>  -->
 
-  <koan>
-     <title>seeking identity</title>
-     <content>traits = new Array() 
-foreach person in society:
-   traits[person] = measure(person)
+  <!-- <koan>
+      <title>seeking identity</title>
+      <content>traits = new Array() 
+ foreach person in society:
+    traits[person] = measure(person)
 
-for myTraits in my.ego:
-   if traits.has( myTraits )
-	print "**ERROR** Not unique!"
+ for myTraits in my.ego:
+    if traits.has( myTraits )
+ 	print "**ERROR** Not unique!"
 
-   else if( neverSeen( myTraits) )
-	return QUIRK
-</content>
-     <left>340</left>
-     <top>220</top>
-     <width>350</width>
-     <author>bytezen</author>
-  </koan>
+    else if( neverSeen( myTraits) )
+ 	return QUIRK
+ </content>
+      <left>340</left>
+      <top>220</top>
+      <width>350</width>
+      <author>bytezen</author>
+   </koan>   -->
 
 <!-- chapter: world observations and solutions -->
- <koan>
+ <!-- <koan>
      <title></title>
      <content>
 since i originated more or less from
@@ -63,7 +63,7 @@ solving the Palestinian problem.
     <top>220</top>
      <width>370</width>
     <author>mati klarwein</author>
-  </koan> 
+  </koan>     -->
 
   <koan>
      <title>if Biggie knew C</title>
@@ -114,7 +114,7 @@ breathing</content>
   </koan>
 
 <!-- chapter: on being an artist -->
-  <koan>
+  <!-- <koan>
      <title></title>
      <content>there are two sorts of artists,
 one not being in the least superior 
@@ -126,9 +126,9 @@ and the other responds to life itself.
     <top>250</top>
      <width>360</width>
      <author>saul steinberg</author>
-  </koan>
+  </koan>      -->
 
-  <koan>
+  <!-- <koan>
      <title></title>
      <content>if( book.type == SELF_DEVELOPMENT )
    throwUp();
@@ -137,9 +137,9 @@ and the other responds to life itself.
     <top>280</top>
      <width>330</width>
     <author>bytezen</author>
-  </koan>
+  </koan>  -->
 
-  <koan>
+  <!-- <koan>
      <title>growth</title>
      <content>questionsIAskMyself =
 [ 'of all paths how did i end up here'
@@ -154,12 +154,12 @@ foreach quandry
     <top>220</top>
     <width>370</width>
      <author>bytezen</author>
-  </koan>
+  </koan>  -->
 
 
 <!-- chapter: words that move -->
 
-  <koan>
+  <!-- <koan>
      <title>bestest word</title>
      <content>
 phantasmagoria
@@ -168,9 +168,9 @@ phantasmagoria
     <top>270</top>
     <width>135</width>
      <author>bytezen</author>
-  </koan>
+  </koan>  -->
 
-  <koan>
+  <!-- <koan>
      <title>truth of the matter</title>
      <content>'truth' and 'fact'
 
@@ -182,9 +182,9 @@ Perhaps even improved accuracy</content>
     <top>230</top>
     <width>350</width>
      <author>bytezen</author>
-  </koan>
+  </koan> -->
 
- <koan>
+ <!-- <koan>
      <title></title>
      <content>i wish the world so peaceful that the
 headlines of its leading daily paper
@@ -194,57 +194,57 @@ DOG EATS NAPKIN IN SLOW MOTION</content>
     <top>260</top>
     <width>350</width>
      <author>mati klarwein</author>
-  </koan>
+  </koan>   -->
 
-  <koan>
-     <title>in a cynicalmental mood</title>
-     <content>life is a fucking four letter word
-for paradox.
-</content>
-    <left>345</left>
-    <top>260</top>
-    <width>325</width>
-    <author>bytezen</author>
-  </koan>
+  <!-- <koan>
+       <title>in a cynicalmental mood</title>
+       <content>life is a fucking four letter word
+  for paradox.
+  </content>
+      <left>345</left>
+      <top>260</top>
+      <width>325</width>
+      <author>bytezen</author>
+    </koan>   -->
 
 <!-- life and passion -->
-  <koan>
-     <title>a worthy endeavor</title>
-     <content>[i am proudest] of having a life
-where work and love are impossible
-to tell apart
-</content>
-    <left>345</left>
-    <top>250</top>
-    <width>325</width>
-    <author>eve kosofsky sedgwick</author>
-  </koan>
+  <!-- <koan>
+       <title>a worthy endeavor</title>
+       <content>[i am proudest] of having a life
+  where work and love are impossible
+  to tell apart
+  </content>
+      <left>345</left>
+      <top>250</top>
+      <width>325</width>
+      <author>eve kosofsky sedgwick</author>
+    </koan>   -->
 
-  <koan>
-     <title>happy life loop</title>
-     <content>while(!dead) 
-  something == shitty ? 
-      	       fuckIt() : enjoyIt();
-</content>
-    <left>330</left>
-    <top>250</top>
-    <width>340</width>
+  <!-- <koan>
+      <title>happy life loop</title>
+      <content>while(!dead) 
+   something == shitty ? 
+       	       fuckIt() : enjoyIt();
+ </content>
+     <left>330</left>
+     <top>250</top>
+     <width>340</width>
+      <author>bytezen</author>
+   </koan>  -->
+
+  <!-- <koan>
+      <title>moments</title>
+      <content>foreach( moment in life ) 
+   if( moment == good || moment == bad ) 
+       grow_by_bit(moment);
+ </content>
+     <left>320</left>
+     <top>250</top>
+     <width>370</width>
      <author>bytezen</author>
-  </koan>
+   </koan>  -->
 
-  <koan>
-     <title>moments</title>
-     <content>foreach( moment in life ) 
-  if( moment == good || moment == bad ) 
-      grow_by_bit(moment);
-</content>
-    <left>320</left>
-    <top>250</top>
-    <width>370</width>
-    <author>bytezen</author>
-  </koan>
-
-  <koan>
+  <!-- <koan>
      <title></title>
      <content>good and great relationships bring out
 the best in you;
@@ -255,9 +255,9 @@ the worst
     <top>260</top>
     <width>360</width>
      <author>bytezen</author>
-  </koan>
+  </koan>   -->
 
-  <koan>
+  <!-- <koan>
      <title>kindred soul?</title>
      <content>do
 {
@@ -271,11 +271,11 @@ the worst
     <top>230</top>
     <width>345</width>
      <author>bytezen</author>
-  </koan>
+  </koan>   -->
 
 <!-- chapter: poetic yearnings -->
  
- <koan>
+ <!-- <koan>
      <title>dis poem</title>
      <content>dis poem will disappoint you
 because dis poem is to be continued
@@ -285,7 +285,7 @@ in your mind
     <top>240</top>
     <width>335</width>
      <author>mutabaruka</author>
-  </koan> 
+  </koan>    -->
 
  <koan>
      <title></title>
@@ -351,7 +351,7 @@ call me doctor Dietz</content>
      <author>me</author>
   </koan>
 
-  <koan>
+  <!-- <koan>
      <title></title>
      <content>if i was an artist and i was in the
 studio then whatever i was doing in the
@@ -363,6 +363,6 @@ of a product.
     <top>250</top>
     <width>370</width>
      <author>thomas friedman</author>
-  </koan>
+  </koan> -->
 
 </koans> 
