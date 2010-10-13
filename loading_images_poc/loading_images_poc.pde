@@ -22,10 +22,25 @@ void setup() {
     img[i] = loadImage(images[i]);
   }
   
-  size(img[5].width, img[5].height);
+  size(1000, 1000);
 }
 
 void draw() {
-  image(img[5], 0,0);
+  int widthCursor = 0, heightCursor = 0, ind = 0, maxHeight = 0;
+  PImage curr;
+  
+  while(heightCursor < height ) {
+    while(widthCursor < width) {
+      curr = loadImage(images[ind]);
+      image(curr,widthCursor,heightCursor);
+      widthCursor += curr.width;
+      maxHeight = curr.height > maxHeight ? curr.height : maxHeight;
+    }
+    heightCursor += maxHeight;
+    widthCursor = 0;
+    maxHeight = 0;    
+  }
+
+    
 }
 
