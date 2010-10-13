@@ -12,10 +12,12 @@ String[] images = {"blissyUltrasound.jpg",
                  "mommyMadeIt.jpg",
                  "mysteriousMuirBeach.jpg",
                  "rhazieMask.jpg",
-                 "sexyTowel.jpg",
+                 "sexyTowel.png",
                  "sxswLego.jpg",
                  "unicornMan.jpg"};
 
+int imgIndex = 0;
+int currentRow = 0;
 
 void setup() {
   for(int i=5; i<6; i++) {
@@ -31,16 +33,30 @@ void draw() {
   
   while(heightCursor < height ) {
     while(widthCursor < width) {
-      curr = loadImage(images[ind]);
-      image(curr,widthCursor,heightCursor);
-      widthCursor += curr.width;
-      maxHeight = curr.height > maxHeight ? curr.height : maxHeight;
+      if(currentRow % 2 == 0) {
+        curr = _fetchCurrentImage(); 
+        image(curr,widthCursor,heightCursor);
+        
+        widthCursor += curr.width;
+        maxHeight = curr.height > maxHeight ? curr.height : maxHeight;        
+      } else {
+         maxHeight = 100;
+         break; 
+      }
+
     }
     heightCursor += maxHeight;
     widthCursor = 0;
-    maxHeight = 0;    
+    maxHeight = 0; 
+    currentRow++;   
   }
-
-    
 }
 
+PImage _fetchCurrentImage() {
+ if(imgIndex < images.length) 
+   return loadImage(images[imgIndex++]);
+ else 
+   imgIndex = 0;
+   
+ return loadImage(images[imgIndex++]);
+}
