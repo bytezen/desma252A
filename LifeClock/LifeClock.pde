@@ -1,7 +1,11 @@
 void setup() {
  size(500,500);
- //noFill(); 
-  
+ //noFill();  
+ 
+   //Testing Clock
+   translate(width/2, height/2);
+  clock.currentAge = new Date(0,0,1);
+  clock.display();
 }
 
 int AGE = 42;        //should be multiple of 3
@@ -15,13 +19,19 @@ float yRads = TWO_PI / yWedges;
 //number of radians per month
 float mRads = yRads/12;
 
+//Test coloring for drawing a clock background
 color[] c = {150,255};
 int radii = 75;
+
+//Clock class test
+Clock clock = new Clock(radii,2);
 
 //
 AgeCircle[] ac = {new AgeCircle(75,yWedges)};
 
 void draw() {
+  if(true)
+    return;
   background(BACKGROUND);
   fill(0);
   
@@ -50,6 +60,8 @@ void draw() {
   //ac[0].drawMonth(3,_month);
   ac[0].drawMonths(3,0,_month);
   */
+  
+
   
   //Test for drawing an age
   // hypothetical age; 3 years old

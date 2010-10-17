@@ -16,7 +16,7 @@ class AgeCircle {
      noFill();
      arc(0,0,radius * 2, radius * 2, 0, yRads);  
    
-     drawMask(maskRadius,yRads);
+     _drawMask(maskRadius,yRads);
      popMatrix();           
   }
   
@@ -28,7 +28,7 @@ class AgeCircle {
     rotate(aMonth*mRads);
     fill(0);
     arc(0,0, radius*2,radius*2,0,mRads);
-    drawMask(maskRadius,mRads);
+    _drawMask(maskRadius,mRads);
     popMatrix();
   }
   
@@ -39,6 +39,7 @@ class AgeCircle {
    rotate(startMonth*mRads);
    fill(0);
    arc(0,0,radius*2,radius*2,0,months*mRads); 
+   _drawMask(maskRadius,months*mRads);  
    popMatrix();
   }
   
@@ -46,7 +47,7 @@ class AgeCircle {
     
   }
   
-  private void drawMask(int _radius, float rads) {
+  private void _drawMask(int _radius, float rads) {
      //draw the inner ring to mask the wedge
      fill(BACKGROUND);
      //stroke(BACKGROUND);
