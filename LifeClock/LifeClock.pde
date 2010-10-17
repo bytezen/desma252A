@@ -4,7 +4,7 @@ void setup() {
   
 }
 
-int AGE = 21;
+int AGE = 42;        //should be multiple of 3
 int LIFE_STAGES = 3;
 color BACKGROUND = color(255);
 int yWedges = AGE / LIFE_STAGES;
@@ -24,13 +24,10 @@ AgeCircle[] ac = {new AgeCircle(75,yWedges)};
 void draw() {
   background(BACKGROUND);
   fill(0);
-  translate(width/2, height/2);
-  ac[0].drawYear(3);
-  int _month = int(frameCount/10) % 12;
-  //ac[0].drawMonth(3,_month);
-  ac[0].drawMonths(3,0,_month);
-  /*for(int j=LIFE_STAGES; j >= 1; j--) {
-    
+  
+  /* UNCOMMENT TO DRAW CLOCK
+  
+  for(int j=LIFE_STAGES; j >= 1; j--) {
     for(int i =0 ; i < yWedges; i++) {
      pushMatrix();
      translate(width/2,height/2);
@@ -42,5 +39,24 @@ void draw() {
      point(0,j* radii); 
      popMatrix(); 
     }
-  }*/
+  }
+
+*/  
+  
+  /* UNCOMMENT TO test ONE MONTH
+  translate(width/2, height/2);
+  ac[0].drawYear(3);
+  int _month = int(frameCount/10) % 12;
+  //ac[0].drawMonth(3,_month);
+  ac[0].drawMonths(3,0,_month);
+  */
+  
+  //Test for drawing an age
+  // hypothetical age; 3 years old
+  int testAgeYear = 3;
+  int testAgeMonth = 0;
+  int testAgeDay = 0;
+  
+  
+
 }
