@@ -94,7 +94,7 @@ class Clock {
   **/
  private void drawYear(ClockCoordinate c) {
   //get the appropriate rung
-
+  println("\t drawing on rung: " + c.rung);
   AgeCircle ac = rungs[c.rung];
   ac.drawYear(c.wedge); 
  } 

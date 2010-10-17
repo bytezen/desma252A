@@ -1,13 +1,15 @@
 void setup() {
  size(500,500);
- //noFill();  
- 
+ //noFill();
+  font = createFont("Monaco", 32);
+  textFont(font);
    //Testing Clock
    translate(width/2, height/2);
   clock.currentAge = new Date(0,0,1);
   clock.display();
 }
-
+//DEBUG FONT
+PFont font;
 int AGE = 42;        //should be multiple of 3
 int LIFE_STAGES = 3;
 color BACKGROUND = color(255);
