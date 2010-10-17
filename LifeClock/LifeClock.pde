@@ -24,7 +24,7 @@ color[] c = {150,255};
 int radii = 75;
 
 //Clock class test
-Clock clock = new Clock(radii,2);
+Clock clock = new Clock(radii,2, new Date(0,0,19));
 
 //
 AgeCircle[] ac = {new AgeCircle(75,yWedges)};
