@@ -20,7 +20,6 @@ class AgeCircle {
      popMatrix();           
   }
   
-  //this is a month
   public void drawMonth(int aYear, int aMonth) {
     pushMatrix();
     _transformCoordsForYear(aYear);
@@ -31,6 +30,16 @@ class AgeCircle {
     arc(0,0, radius*2,radius*2,0,mRads);
     drawMask(maskRadius,mRads);
     popMatrix();
+  }
+  
+  public void drawMonths(int aYear, int startMonth, int endMonth) {
+   int months = endMonth - startMonth + 1;
+   pushMatrix();
+   _transformCoordsForYear(aYear);
+   rotate(startMonth*mRads);
+   fill(0);
+   arc(0,0,radius*2,radius*2,0,months*mRads); 
+   popMatrix();
   }
   
   private void _initialize() {

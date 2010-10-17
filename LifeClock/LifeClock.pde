@@ -27,7 +27,8 @@ void draw() {
   translate(width/2, height/2);
   ac[0].drawYear(3);
   int _month = int(frameCount/10) % 12;
-  ac[0].drawMonth(3,_month);
+  //ac[0].drawMonth(3,_month);
+  ac[0].drawMonths(3,0,_month);
   /*for(int j=LIFE_STAGES; j >= 1; j--) {
     
     for(int i =0 ; i < yWedges; i++) {
