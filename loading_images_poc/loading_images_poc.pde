@@ -18,6 +18,7 @@ String[] images = {"blissyUltrasound.jpg",
 
 int imgIndex = 0;
 int currentRow = 0;
+PFont _fMonaco;
 
 void setup() {
   for(int i=5; i<6; i++) {
@@ -25,6 +26,8 @@ void setup() {
   }
   
   size(1000, 1000);
+   _fMonaco = loadFont("Monaco.vlw");
+   textFont(_fMonaco, 16); 
 }
 
 void draw() {
@@ -40,8 +43,12 @@ void draw() {
         widthCursor += curr.width;
         maxHeight = curr.height > maxHeight ? curr.height : maxHeight;        
       } else {
-         maxHeight = 100;
-         break; 
+        pushMatrix();
+        translate(0,maxHeight);
+        maxHeight = 100;
+        text("hello",0,0,20,20);
+        popMatrix();
+        widthCursor += 20;
       }
 
     }
