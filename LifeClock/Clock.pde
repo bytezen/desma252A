@@ -1,7 +1,7 @@
 class Clock {
  public int AGE = 20;              //total time represented in clock must be divisible by number of rungs
                                    //    also equal to the # of wedges in the clock
- private int BASE_MONTHS = 12; 
+ 
  private AgeCircle[] rungs;    
 
  private int rungCount;       //corresponds to the number of rings in clock
@@ -37,15 +37,11 @@ class Clock {
  public void display() {
   //for each rung in the clock update the state
   ClockCoordinate _c;
-  for(int i = rungCount-1; i >= 0; i--) {
-    println("{display} rung: " + i);
-   for(int j=0; j < yearsPast[i].size(); j++) {
-     if(yearsPast[i].get(j) == null)
-       break;
-     _c = (ClockCoordinate) yearsPast[i].get(j);  
-     println("\tcoord: "+ _c);
-     drawYear(_c);
-   }  
+  ClockCoordinate[] toRender = (ClockCoordinate[]) subset(timePath,0,currentAge.y);
+  
+  for(int i=toRender.length-1; i >=0 ; i--) {
+    println(toRender[i]);
+     drawYear(toRender[i]); 
   }
   
   /*
@@ -56,6 +52,7 @@ class Clock {
   */
  }
  
+ 
  /**
   INITIALIZE
   **/
@@ -63,6 +60,21 @@ class Clock {
   yearWedges = AGE / rungCount;
   yearRadians = TWO_PI / yearWedges;
   monthRadians = yearRadians/BASE_MONTHS;
+  
+  //  //initialize each rung in the clock
+  for(int i=0; i< rungCount; i++) {
+      rungs[i] = new AgeCircle((i+1)*rungRadius, yearWedges); 
+  }
+  
+  //lets just build the timePath as the ClockCoordinates in order for version 1
+  int ind=0;
+  for(int _rung=0; _rung < rungCount; _rung++) {
+   for(int _wedge=0; _wedge < yearWedges; _wedge++) {
+     timePath[ind++] = new ClockCoordinate(_rung,_wedge);
+   } 
+  }
+   
+   /*
   yearsPast = new ArrayList[rungCount];
   
   // initialize years past to track the yearWedges to draw
@@ -85,8 +97,8 @@ class Clock {
   for(int i=1; i< currentAge.y; i++) {
    ClockCoordinate c = getNextCoordinate();
    cacheCoordinate(c); 
-  }
-  
+  }  
+  */
  }
  
   /**
@@ -94,7 +106,6 @@ class Clock {
   **/
  private void drawYear(ClockCoordinate c) {
   //get the appropriate rung
-  println("\t drawing on rung: " + c.rung);
   AgeCircle ac = rungs[c.rung];
   ac.drawYear(c.wedge); 
  } 
@@ -240,6 +251,26 @@ class ClockCoordinate {
  String toString() {
   return "("+rung+","+wedge+")"; 
  }
+}
+
+class TimePathIterator {
+   private int pointer = 0;
+   private ClockCoordinate[] path;
+   
+   public TimePathIterator(ClockCoordinate[] path) {
+    this.path = path; 
+   }
+  
+   public ClockCoordinate getNext() {
+    if(hasNext()) 
+      return path[pointer++];
+    else
+      return null;
+   }
+  
+   private Boolean hasNext() {
+    return pointer+1 < path.length;
+   } 
 }
 
 

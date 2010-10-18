@@ -23,7 +23,6 @@ class AgeCircle {
      _drawMask(maskRadius,radiansPerSegment);
      
      fill(255,0,0);
-     text("yo"+aYear,0,0,10,10);
      popMatrix();           
   }
   

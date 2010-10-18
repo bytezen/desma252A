@@ -5,7 +5,6 @@ void setup() {
   textFont(font);
    //Testing Clock
    translate(width/2, height/2);
-  clock.currentAge = new Date(0,0,1);
   clock.display();
 }
 //DEBUG FONT
@@ -27,7 +26,7 @@ color[] c = {150,255};
 int radii = 75;
 
 //Clock class test
-Clock clock = new Clock(radii,2, new Date(0,0,1));
+Clock clock = new Clock(radii,2, new Date(0,0,15));
 
 //
 AgeCircle[] ac = {new AgeCircle(75,yWedges)};
