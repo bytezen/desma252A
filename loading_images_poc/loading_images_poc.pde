@@ -17,7 +17,8 @@ String[] images = {"blissyUltrasound.jpg",
                  "unicornMan.jpg"};
 
 String FACE_MASK = "face_mask.png";
-PImage iMask = loadImage(FACE_MASK);
+PImage iMask;
+PGraphics pg;
 
 int imgIndex = 0;
 int currentRow = 0;
@@ -32,41 +33,50 @@ void setup() {
   }
   
   //load image mask
+  iMask = loadImage(FACE_MASK);
   
   size(iMask.width, iMask.height);
    _fMonaco = loadFont("Monaco.vlw");
    textFont(_fMonaco, 12); 
   xmlKoans = new XMLElement(this, "koans.xml");   
-   frameRate(10);
-}
+   pg = createGraphics(width,height,P2D);
+ }
 
 void draw() {
-  if(frameCount % 50 != 0 && frameCount > 10 )
-    return;
-  background(0);  
+  if(frameCount > 1) {
+    if(frameCount % 120 != 0)
+      return;
+  }
   int currentRow = 0, widthCursor = 0, heightCursor = 0, ind = 0, maxHeight = 0;
   PImage curr;
-  
+  background(255);
+  pg.beginDraw();
+  pg.background(0);
   while(heightCursor < height ) {
     while(widthCursor < width) {
       if(currentRow % 2 == 0) {
         print("image @ " + widthCursor + ";; " +" height @ " + heightCursor);
         curr = _fetchCurrentImage(); 
-       image(curr,widthCursor,heightCursor);
+        pg.image(curr,widthCursor,heightCursor);
         
         widthCursor += curr.width;
         maxHeight = curr.height > maxHeight ? curr.height : maxHeight;        
       } else {
-        pushMatrix();
-        translate(widthCursor,heightCursor);
+        pg.pushMatrix();
+        pg.translate(widthCursor,heightCursor);
         println("**"+heightCursor);
-        text(_getRandomKoan(),0,0,TEXT_WIDTH,TEXT_HEIGHT);
+        pg.text(_getRandomKoan(),0,0,TEXT_WIDTH,TEXT_HEIGHT);
 
         widthCursor += TEXT_WIDTH;
         maxHeight = TEXT_HEIGHT;
-        popMatrix();
+        pg.popMatrix();
+        
       }
     }
+    
+    pg.endDraw();
+    pg.mask(iMask);
+    image(pg,0,0);
     heightCursor += maxHeight;
     widthCursor = 0;
     maxHeight = 0; 
