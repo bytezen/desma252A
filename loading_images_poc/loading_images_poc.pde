@@ -19,6 +19,7 @@ String[] images = {"blissyUltrasound.jpg",
 int imgIndex = 0;
 int currentRow = 0;
 PFont _fMonaco;
+int TEXT_WIDTH = 100, TEXT_HEIGHT =100;
 
 void setup() {
   for(int i=5; i<6; i++) {
@@ -28,29 +29,32 @@ void setup() {
   size(1000, 1000);
    _fMonaco = loadFont("Monaco.vlw");
    textFont(_fMonaco, 16); 
+   frameRate(10);
 }
 
 void draw() {
-  int widthCursor = 0, heightCursor = 0, ind = 0, maxHeight = 0;
+    
+  int currentRow = 0, widthCursor = 0, heightCursor = 0, ind = 0, maxHeight = 0;
   PImage curr;
   
   while(heightCursor < height ) {
     while(widthCursor < width) {
       if(currentRow % 2 == 0) {
+        print("image @ " + widthCursor + ";; " +" height @ " + heightCursor);
         curr = _fetchCurrentImage(); 
-        image(curr,widthCursor,heightCursor);
+       image(curr,widthCursor,heightCursor);
         
         widthCursor += curr.width;
         maxHeight = curr.height > maxHeight ? curr.height : maxHeight;        
       } else {
-        pushMatrix();
-        translate(0,maxHeight);
-        maxHeight = 100;
-        text("hello",0,0,20,20);
-        popMatrix();
-        widthCursor += 20;
+        //pushMatrix();
+        //translate(0,maxHeight);
+        println("**"+heightCursor);
+        text("hello",widthCursor,heightCursor,TEXT_WIDTH,TEXT_HEIGHT);
+        //popMatrix();
+        widthCursor += TEXT_WIDTH;
+        maxHeight = TEXT_HEIGHT;
       }
-
     }
     heightCursor += maxHeight;
     widthCursor = 0;
