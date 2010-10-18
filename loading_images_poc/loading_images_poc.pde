@@ -47,13 +47,13 @@ void draw() {
         widthCursor += curr.width;
         maxHeight = curr.height > maxHeight ? curr.height : maxHeight;        
       } else {
-        //pushMatrix();
-        //translate(0,maxHeight);
+        pushMatrix();
+        translate(widthCursor,heightCursor);
         println("**"+heightCursor);
-        text("hello",widthCursor,heightCursor,TEXT_WIDTH,TEXT_HEIGHT);
-        //popMatrix();
+        text("hello",0,0,TEXT_WIDTH,TEXT_HEIGHT);
         widthCursor += TEXT_WIDTH;
         maxHeight = TEXT_HEIGHT;
+        popMatrix();
       }
     }
     heightCursor += maxHeight;
