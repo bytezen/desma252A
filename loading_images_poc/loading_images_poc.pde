@@ -16,6 +16,9 @@ String[] images = {"blissyUltrasound.jpg",
                  "sxswLego.jpg",
                  "unicornMan.jpg"};
 
+String FACE_MASK = "face_mask.png";
+PImage iMask = loadImage(FACE_MASK);
+
 int imgIndex = 0;
 int currentRow = 0;
 PFont _fMonaco;
@@ -23,13 +26,16 @@ int TEXT_WIDTH = 100, TEXT_HEIGHT =100;
 XMLElement xmlKoans;
 
 void setup() {
-  for(int i=5; i<6; i++) {
+  //load collage images
+  for(int i=0; i<images.length; i++) {
     img[i] = loadImage(images[i]);
   }
   
-  size(1000, 1000);
+  //load image mask
+  
+  size(iMask.width, iMask.height);
    _fMonaco = loadFont("Monaco.vlw");
-   textFont(_fMonaco, 16); 
+   textFont(_fMonaco, 12); 
   xmlKoans = new XMLElement(this, "koans.xml");   
    frameRate(10);
 }
