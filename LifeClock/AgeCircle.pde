@@ -1,11 +1,15 @@
 class AgeCircle {
   int radius, maskRadius;
   int segments;
+  float radiansPerSegment;  //this is equivalent to radians per year
+  float radiansPerMonth;
   
   public AgeCircle(int _radius, int _segments) {
     radius = _radius;
     maskRadius = radius - 10;
     segments = _segments;
+    radiansPerSegment = TWO_PI / _segments;
+    radiansPerMonth = radiansPerSegment/BASE_MONTHS;
   }
   
   //this is a wedge
@@ -14,9 +18,9 @@ class AgeCircle {
     _transformCoordsForYear(aYear);
      stroke(#00FF00);
      noFill();
-     arc(0,0,radius * 2, radius * 2, 0, yRads);  
+     arc(0,0,radius * 2, radius * 2, 0, radiansPerSegment);  
    
-     //_drawMask(maskRadius,yRads);
+     _drawMask(maskRadius,radiansPerSegment);
      
      fill(255,0,0);
      text("yo"+aYear,0,0,10,10);
@@ -28,10 +32,10 @@ class AgeCircle {
     _transformCoordsForYear(aYear);
     //noFill();
     
-    rotate(aMonth*mRads);
+    rotate(aMonth*radiansPerMonth);
     fill(0);
-    arc(0,0, radius*2,radius*2,0,mRads);
-    _drawMask(maskRadius,mRads);
+    arc(0,0, radius*2,radius*2,0,radiansPerMonth);
+    _drawMask(maskRadius,radiansPerMonth);
     popMatrix();
   }
   
@@ -39,10 +43,10 @@ class AgeCircle {
    int months = endMonth - startMonth + 1;
    pushMatrix();
    _transformCoordsForYear(aYear);
-   rotate(startMonth*mRads);
+   rotate(startMonth*radiansPerMonth);
    fill(0);
-   arc(0,0,radius*2,radius*2,0,months*mRads); 
-   _drawMask(maskRadius,months*mRads);  
+   arc(0,0,radius*2,radius*2,0,months*radiansPerMonth); 
+   _drawMask(maskRadius,months*radiansPerMonth);  
    popMatrix();
   }
   
@@ -58,7 +62,7 @@ class AgeCircle {
   }
   
   private void _transformCoordsForYear(int aYear) {
-     rotate(aYear*yRads);    
+     rotate(aYear*radiansPerSegment);    
   }
   
 }

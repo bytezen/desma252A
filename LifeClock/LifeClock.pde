@@ -14,19 +14,20 @@ int AGE = 42;        //should be multiple of 3
 int LIFE_STAGES = 3;
 color BACKGROUND = color(255);
 int yWedges = AGE / LIFE_STAGES;
+int BASE_MONTHS = 12;
 
 //number of radians per year
-float yRads = TWO_PI / yWedges;
+//float yRads = TWO_PI / yWedges;
 
 //number of radians per month
-float mRads = yRads/12;
+//float mRads = yRads/12;
 
 //Test coloring for drawing a clock background
 color[] c = {150,255};
 int radii = 75;
 
 //Clock class test
-Clock clock = new Clock(radii,2, new Date(0,0,19));
+Clock clock = new Clock(radii,2, new Date(0,0,1));
 
 //
 AgeCircle[] ac = {new AgeCircle(75,yWedges)};
