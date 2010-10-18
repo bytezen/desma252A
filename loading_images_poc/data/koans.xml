@@ -1,0 +1,368 @@
+<koans>
+
+  <!-- <koan>
+     <title>call me...</title>
+     <content>...Grand Puba Excelsior
+...Uncle Big Ranch
+...Haiku Hustler
+...Lost Son of Beta Carotene
+...One Nigga Talkin
+...Ancient Abyssinian
+</content>
+    <left>360</left>
+    <top>230</top>
+    <width>270</width>
+    <author>bytezen</author>
+  </koan>
+              -->
+<!-- chapter: who am I -->
+  <!-- <koan>
+     <title> </title>
+     <content>what you respond to in
+any work of art is the artist's 
+struggle against his or her
+limitations.</content>
+     <left>350</left>
+     <top>260</top>
+     <width>300</width>
+     <author>saul steinberg</author>
+  </koan>  -->
+
+  <!-- <koan>
+      <title>seeking identity</title>
+      <content>traits = new Array() 
+ foreach person in society:
+    traits[person] = measure(person)
+
+ for myTraits in my.ego:
+    if traits.has( myTraits )
+ 	print "**ERROR** Not unique!"
+
+    else if( neverSeen( myTraits) )
+ 	return QUIRK
+ </content>
+      <left>340</left>
+      <top>220</top>
+      <width>350</width>
+      <author>bytezen</author>
+   </koan>   -->
+
+<!-- chapter: world observations and solutions -->
+ <!-- <koan>
+     <title></title>
+     <content>
+since i originated more or less from
+Israel and still care about that place
+i think that all Jews should adopt
+Moslem first names and all Moslems,
+Jewish first names.  it's no big deal,
+but it would be a first step toward
+solving the Palestinian problem.
+</content>
+    <left>320</left>
+    <top>220</top>
+     <width>370</width>
+    <author>mati klarwein</author>
+  </koan>     -->
+
+  <koan>
+     <title>if Biggie knew C</title>
+     <content>if( sum(money) > lastSum ) 
+   problems++;
+</content>
+    <left>360</left>
+    <top>270</top>
+     <width>250</width>
+    <author>bytezen</author>
+  </koan>
+
+
+  <koan>
+     <title></title>
+     <content>how many of the world's
+train systems are designed
+to keep
+poor people
+away from
+rich people</content>
+    <left>360</left>
+    <top>240</top>
+     <width>240</width>
+     <author>bytezen</author>
+  </koan>
+
+  <koan>
+     <title>Go(ogle)d</title>
+     <content>if(haveQuestion)
+   seeGod ? askHim() : askGoogle();
+     </content>
+    <left>330</left>
+    <top>260</top>
+     <width>330</width>
+     <author>bytezen</author>
+  </koan> 
+
+  <koan>
+     <title></title>
+     <content>air pollution
+lets you see what you're
+breathing</content>
+    <left>390</left>
+    <top>270</top>
+     <width>230</width>
+     <author>bytezen</author>
+  </koan>
+
+<!-- chapter: on being an artist -->
+  <!-- <koan>
+     <title></title>
+     <content>there are two sorts of artists,
+one not being in the least superior 
+to the other. But one responds to the
+history of his or her art so far,
+and the other responds to life itself.
+</content>
+    <left>325</left>
+    <top>250</top>
+     <width>360</width>
+     <author>saul steinberg</author>
+  </koan>      -->
+
+  <!-- <koan>
+     <title></title>
+     <content>if( book.type == SELF_DEVELOPMENT )
+   throwUp();
+</content>
+    <left>330</left>
+    <top>280</top>
+     <width>330</width>
+    <author>bytezen</author>
+  </koan>  -->
+
+  <!-- <koan>
+     <title>growth</title>
+     <content>questionsIAskMyself =
+[ 'of all paths how did i end up here'
+ 'is this art?'
+ 'what the fuck?'
+ 'is this big enough for a black guy' ]
+
+foreach quandry 
+   return aStepTowardSelf
+</content>
+    <left>330</left>
+    <top>220</top>
+    <width>370</width>
+     <author>bytezen</author>
+  </koan>  -->
+
+
+<!-- chapter: words that move -->
+
+  <!-- <koan>
+     <title>bestest word</title>
+     <content>
+phantasmagoria
+</content>
+    <left>425</left>
+    <top>270</top>
+    <width>135</width>
+     <author>bytezen</author>
+  </koan>  -->
+
+  <!-- <koan>
+     <title>truth of the matter</title>
+     <content>'truth' and 'fact'
+
+two words that could be omitted from
+language without any loss of accuracy
+in communication;  
+Perhaps even improved accuracy</content>
+    <left>330</left>
+    <top>230</top>
+    <width>350</width>
+     <author>bytezen</author>
+  </koan> -->
+
+ <!-- <koan>
+     <title></title>
+     <content>i wish the world so peaceful that the
+headlines of its leading daily paper
+could read:
+DOG EATS NAPKIN IN SLOW MOTION</content>
+    <left>325</left>
+    <top>260</top>
+    <width>350</width>
+     <author>mati klarwein</author>
+  </koan>   -->
+
+  <!-- <koan>
+       <title>in a cynicalmental mood</title>
+       <content>life is a fucking four letter word
+  for paradox.
+  </content>
+      <left>345</left>
+      <top>260</top>
+      <width>325</width>
+      <author>bytezen</author>
+    </koan>   -->
+
+<!-- life and passion -->
+  <!-- <koan>
+       <title>a worthy endeavor</title>
+       <content>[i am proudest] of having a life
+  where work and love are impossible
+  to tell apart
+  </content>
+      <left>345</left>
+      <top>250</top>
+      <width>325</width>
+      <author>eve kosofsky sedgwick</author>
+    </koan>   -->
+
+  <!-- <koan>
+      <title>happy life loop</title>
+      <content>while(!dead) 
+   something == shitty ? 
+       	       fuckIt() : enjoyIt();
+ </content>
+     <left>330</left>
+     <top>250</top>
+     <width>340</width>
+      <author>bytezen</author>
+   </koan>  -->
+
+  <!-- <koan>
+      <title>moments</title>
+      <content>foreach( moment in life ) 
+   if( moment == good || moment == bad ) 
+       grow_by_bit(moment);
+ </content>
+     <left>320</left>
+     <top>250</top>
+     <width>370</width>
+     <author>bytezen</author>
+   </koan>  -->
+
+  <!-- <koan>
+     <title></title>
+     <content>good and great relationships bring out
+the best in you;
+all relationships bring out 
+the worst
+</content>
+    <left>315</left>
+    <top>260</top>
+    <width>360</width>
+     <author>bytezen</author>
+  </koan>   -->
+
+  <!-- <koan>
+     <title>kindred soul?</title>
+     <content>do
+{
+ something = 'impassions you'
+ tellSomeone( whatYouDo )
+ persons.reaction = 'who they are in
+			your life'
+}
+</content>
+    <left>340</left>
+    <top>230</top>
+    <width>345</width>
+     <author>bytezen</author>
+  </koan>   -->
+
+<!-- chapter: poetic yearnings -->
+ 
+ <!-- <koan>
+     <title>dis poem</title>
+     <content>dis poem will disappoint you
+because dis poem is to be continued
+in your mind
+</content>
+    <left>335</left>
+    <top>240</top>
+    <width>335</width>
+     <author>mutabaruka</author>
+  </koan>    -->
+
+ <koan>
+     <title></title>
+     <content>jostling jumbles
+broken cookie crumbles
+honey is falling
+bees are bumbling
+tickling and tripsing
+wriggling and writhing
+at the foot of the goddess
+laughing and tithing
+</content>
+    <left>390</left>
+    <top>230</top>
+    <width>250</width>
+     <author>bytezen</author>
+  </koan>
+
+  <koan>
+     <title></title>
+     <content>skip in who you are
+inhale ego's pheromones
+frolick in yourself
+</content>
+    <left>390</left>
+    <top>260</top>
+    <width>220</width>
+     <author>bytezen</author>
+  </koan>
+
+  <koan>
+     <title></title>
+     <content>if you were the world
+i would fly to your rhythm
+soaring Lover's Love
+</content>
+    <left>370</left>
+    <top>260</top>
+    <width>250</width>
+     <author>bytezen</author>
+  </koan>
+
+  <koan>
+     <title></title>
+     <content>whispers to tremors
+ideas evaporating
+inspiration's birth
+</content>
+    <left>400</left>
+    <top>260</top>
+    <width>180</width>
+     <author>bytezen</author>
+  </koan>
+
+  <koan>
+     <title>to Steph</title>
+     <content>S.cerevisae
+How long you have tortured me
+call me doctor Dietz</content>
+    <left>370</left>
+    <top>250</top>
+    <width>275</width>
+     <author>me</author>
+  </koan>
+
+  <!-- <koan>
+     <title></title>
+     <content>if i was an artist and i was in the
+studio then whatever i was doing in the
+studio must be art...at this point art
+became more of an activity and less
+of a product.
+</content>
+    <left>315</left>
+    <top>250</top>
+    <width>370</width>
+     <author>thomas friedman</author>
+  </koan> -->
+
+</koans> 
